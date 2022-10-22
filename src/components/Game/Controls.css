@@ -1,0 +1,9 @@
+.game_controls {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+}
+
+.game_controls button {
+	margin: 5px;
+}

@@ -6,7 +6,7 @@ function App() {
 	const [gameData, setGameData] = useState();
 
 	if (gameData) {
-		return <GamePage gameData={gameData} onReturn={() => setGameData(null)} />
+		return <GamePage gameData={gameData} onExit={() => setGameData(null)} />
 	} else {
 		return <StartPage onGameData={setGameData} />
 	}

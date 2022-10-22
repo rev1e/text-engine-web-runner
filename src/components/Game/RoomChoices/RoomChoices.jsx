@@ -9,9 +9,9 @@ const RoomChoices = (props) => {
 
 	return (
 		<div className="room_choices">
-			{ choices.map((choice, i) => (<>
+			{ choices.map((choice, i) => (
 				<RoomChoice key={i} text={choice.text} onClick={() => onSelect(i)} />
-			</>)) }
+			)) }
 		</div>
 	);
 }
