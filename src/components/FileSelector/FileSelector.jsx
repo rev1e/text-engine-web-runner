@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import "./FileSelector.css";
 
 const FileSelector = props => {
 	const inputRef = useRef();
@@ -9,7 +10,7 @@ const FileSelector = props => {
 
 	return (
 		<>
-			<button onClick={() => inputRef.current.click()}>
+			<button className="file_selector" onClick={() => inputRef.current.click()} disabled={props.disabled}>
 				{ props.text ? props.text : "Select File" }
 			</button>
 			<input type="file"

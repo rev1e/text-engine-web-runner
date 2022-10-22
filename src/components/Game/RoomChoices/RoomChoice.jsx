@@ -1,6 +1,8 @@
+import "./RoomChoice.css";
+
 const RoomChoice = ({ text, onClick }) => {
 	return (
-		<button onClick={onClick}>{ text }</button>
+		<button className="room_choice" onClick={onClick}>{ text }</button>
 	);
 }
 

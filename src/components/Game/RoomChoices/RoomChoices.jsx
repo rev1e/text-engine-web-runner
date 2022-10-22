@@ -1,4 +1,5 @@
 import RoomChoice from "./RoomChoice";
+import "./RoomChoices.css";
 
 const RoomChoices = (props) => {
 	const choices = props.choices;
@@ -7,10 +8,10 @@ const RoomChoices = (props) => {
 	};
 
 	return (
-		<div>
-			{ choices.map((choice, i) => (
+		<div className="room_choices">
+			{ choices.map((choice, i) => (<>
 				<RoomChoice key={i} text={choice.text} onClick={() => onSelect(i)} />
-			)) }
+			</>)) }
 		</div>
 	);
 }

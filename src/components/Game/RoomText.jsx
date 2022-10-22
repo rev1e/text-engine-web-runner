@@ -1,6 +1,8 @@
+import "./RoomText.css";
+
 const Room = props => {
 	return (
-		<p>{ props.text }</p>
+		<p className="room_text">{ props.text }</p>
 	);
 }
 

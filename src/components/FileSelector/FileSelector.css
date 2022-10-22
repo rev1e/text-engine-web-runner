@@ -1,0 +1,32 @@
+.file_selector {
+	max-width: 50vw;
+	width: 20rem;
+	height: 10rem;
+
+	font-size: 2rem;
+	font-weight: 700;
+
+	color: #f0f0f0;	
+	background-color: #ffffff00;
+
+	border: 2px white solid;
+	border-radius: 10px;
+
+	transition: all 0.07s linear;
+}
+
+.file_selector:hover {
+	cursor: pointer;
+	background-color: #f0f0f0;
+	color: #202020;
+}
+
+.file_selector:disabled {
+	background-color: #151515;
+	color: #202020;
+	border-color: #202020;
+}
+
+.file_selector:disabled:hover {
+	cursor: default;
+}

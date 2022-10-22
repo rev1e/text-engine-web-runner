@@ -2,5 +2,34 @@ body, html {
 	margin: 0;
 	padding: 0;
 
+	width: 100%;
+}
+
+body {
 	font-family: monospace;
+	background-color: #202020;
+	color: #f0f0f0;
+}
+
+button {
+	padding: 0.5rem 2rem 0.5rem 2rem;
+	border: none;
+	background-color: #080808;
+	color: #f0f0f0;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #303030;
+}
+
+.container {
+	padding-top: 20vh;
+	max-width: 70vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center {
+	text-align: center;
 }
