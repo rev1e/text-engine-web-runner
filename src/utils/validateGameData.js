@@ -2,6 +2,13 @@ const validateGameData = data => {
 	// TODO
 
 	const parsed_data = JSON.parse(data);
+
+	// validate images
+	const images = parsed_data.images;
+	if (typeof(images) != "object" || typeof(images[0]) != "string") {
+		throw "invalid images";
+	}
+	const max_image = images.length;
 	
 	// validate rooms
 	const rooms = parsed_data.rooms;
@@ -15,6 +22,10 @@ const validateGameData = data => {
 		}
 		if (typeof(room.text) != "string") {
 			throw "room 'text' doesn't exist";
+		}
+
+		if (room.image && (typeof(room.image) != "number" || room.image > max_image)) {
+			throw "room 'image' doesn't exist";
 		}
 
 		if (typeof(room.choices) == "object" && typeof(room.choices[0]) == "object") {

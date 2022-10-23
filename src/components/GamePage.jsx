@@ -27,7 +27,9 @@ const GamePage = ({ gameData, onExit }) => {
 	return (
 		<div className="center">
 			<Controls onExit={onExit} onSave={saveGame} onReset={resetGame} />
-			<Room room={rooms[currentRoomId]} goTo={setCurrentRoomId} />
+			{ gameData.images ?
+			<Room room={rooms[currentRoomId]} images={gameData.images} goTo={setCurrentRoomId} /> :
+			<Room room={rooms[currentRoomId]} goTo={setCurrentRoomId} /> }
 		</div>
 	);
 }
