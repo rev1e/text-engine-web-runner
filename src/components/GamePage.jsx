@@ -5,19 +5,19 @@ import Room from "./Game/Room";
 const GamePage = ({ gameData, onExit }) => {
 	const rooms = gameData.rooms;
 
-	const [currentRoomId, setCurrentRoomId] = useState(gameData.entry);
+	const [currentRoomId, setCurrentRoomId] = useState(gameData.metadata.entry);
 
 	const saveGame = () => {
-		localStorage.setItem(gameData.id, currentRoomId);
+		localStorage.setItem(gameData.metadata.id, currentRoomId);
 	};
 
 	const resetGame = () => {
-		localStorage.removeItem(gameData.id);
-		setCurrentRoomId(gameData.entry);
+		localStorage.removeItem(gameData.metadata.id);
+		setCurrentRoomId(gameData.metadata.entry);
 	};
 
 	useEffect(() => {
-		const save = localStorage.getItem(gameData.id);
+		const save = localStorage.getItem(gameData.metadata.id);
 
 		if (save) {
 			setCurrentRoomId(save);

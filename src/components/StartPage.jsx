@@ -31,7 +31,7 @@ const GamePage = props => {
 	return (
 		<div className="center">
 			<h1 className="site_title">Play Text Games In Your Browser</h1>
-			<FileSelector text="Select Game File" accept=".textgame" onFileSelected={onFileSelected} disabled={loading} />
+			<FileSelector text="Select Game File" accept=".tg" onFileSelected={onFileSelected} disabled={loading} />
 			{ loading && <p>
 				Parsing game data... Please wait...
 			</p> }
